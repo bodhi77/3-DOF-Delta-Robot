@@ -1,0 +1,76 @@
+{
+  "model_type": "IT2Mamdani_ML",
+  "optimizer": "PSO (pyit2fls built-in)",
+  "pso_params": [
+    50,
+    150,
+    0.6,
+    1.5,
+    1.5
+  ],
+  "n_input": 2,
+  "m_rules": 4,
+  "rules_sweep_used": false,
+  "input_scaling": {
+    "method": "mean +/- 3*std with 5% padding",
+    "lo": [
+      -1.1864917312041363,
+      -48.445056218736504
+    ],
+    "hi": [
+      1.2130216235939095,
+      50.29694296144236
+    ],
+    "input_columns": [
+      "e_deg_avg",
+      "de_deg_avg"
+    ]
+  },
+  "output_scaling": {
+    "method": "min-max [0, 1] with 5% padding",
+    "lo": 0.00075,
+    "hi": 0.00625,
+    "output_column": "optimal_mu"
+  },
+  "split": {
+    "train_size": 1750,
+    "val_size": 375,
+    "test_size": 375,
+    "test_ratio": 0.15,
+    "val_ratio": 0.15,
+    "shuffled": true,
+    "random_seed": 42
+  },
+  "metrics": {
+    "train": {
+      "rmse": 0.001459157531583204,
+      "mae": 0.0012317811582575281,
+      "std": 0.0014591573994124473,
+      "r2": 0.1803272111020785,
+      "mse": 2.1291407019759893e-06
+    },
+    "val": {
+      "rmse": 0.0015043463626583143,
+      "mae": 0.0012487272009056966,
+      "std": 0.0014959027696805351,
+      "r2": 0.10070963363158747,
+      "mse": 2.2630579788433003e-06
+    },
+    "test": {
+      "rmse": 0.001503241628416958,
+      "mae": 0.0012705597640143076,
+      "std": 0.001503211432597495,
+      "r2": 0.17513615830937235,
+      "mse": 2.2597353934056675e-06
+    }
+  },
+  "history": {
+    "final_fitness_scaled": 11.09835253719818,
+    "smoke_fitness_scaled": 2.3041811284835587,
+    "smoke_conv_first_last": [
+      2.7425070546054258,
+      2.3041811284835587
+    ]
+  },
+  "created_at": "2026-06-11 10:02:53"
+}
